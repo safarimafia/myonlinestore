@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1>Nicci's Vinyls</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Vinyl Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Subtotal: R<span id="subtotal"></span></p>
+        <p>VAT (15%): R<span id="vat"></span></p>
+        <p>Discount: R<span id="discount"></span></p>
+        <p>Delivery: R<span id="delivery"></span></p>
+        <p>Total: R<span id="total"></span></p>
+        <form id="discount-form">
+            <label for="coupon">Discount Coupon:</label>
+            <input type="text" id="coupon" name="coupon" class="form-control">
+            <button type="submit" class="btn btn-primary mt-2">Apply</button>
+        </form>
+        <form id="delivery-form">
+            <label>
+                <input type="radio" name="delivery" value="collection"> Collection
+            </label>
+            <label>
+                <input type="radio" name="delivery" value="delivery"> Delivery
+            </label>
+            <div id="delivery-options" style="display:none;">
+                <label>
+                    <input type="radio" name="delivery-option" value="standard"> Standard Delivery (R10)
+                </label>
+                <label>
+                    <input type="radio" name="delivery-option" value="express"> Express Delivery (R25)
+                </label>
+            </div>
+        </form>
+        <button id="confirm-order" class="btn btn-success">Confirm Order</button>
+        <button id="clear-cart" class="btn btn-danger">Clear Cart</button>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
